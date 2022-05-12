@@ -42,5 +42,17 @@ para=soup.find('p')
 #print(soup.find('p')['class'])
 
 
+# Get the text from the tags/soup
+#print(soup.find('p').get_text())
+print(soup.get_text())
+
+
 # find all the elements with class lead
 print(soup.find_all("p",class_="lead"))
+
+
+# get all the links in the page
+
+anchors=soup.find_all('a')
+for link in anchors:
+    print(link.get('href'))
